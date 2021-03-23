@@ -1,0 +1,165 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Lato', sans-serif;
+    height: 100vh;
+    width: 100%;
+    background: linear-gradient(0deg, rgba(218,219,212,1) 85vh, rgb(0,150,136,1) 15vh);
+    overflow: hidden;
+}
+
+/* FINESTRA CENTRALE */
+.window {
+    height: 95vh;
+    width: 80%;
+    margin: 2.5vh auto;
+    background-image: url(img/mine.jpg);
+
+}
+
+/* PARTE SINISTRA COI CONTATTI */
+.nav_side {
+    height: 100%;
+    width: 40%;
+    background-color: #fafafa;
+    float: left;
+}
+
+/* DUE HEADER */
+.header_window {
+    height: 10%;
+    background-color: #eaeaea;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 10px;
+}
+
+.utente img {
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 5px;
+}
+
+.header_window .utente {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.icone i {
+    color: #b1b1b1;
+    font-size: 20px;
+    padding-right: 15px;
+}
+
+.notifiche_blu {
+    height: 12%;
+    background-color: #8edafb;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 0 10px;
+}
+
+.notifiche_blu .campanella i {
+    font-size: 20px;
+    color: #8edafb;
+}
+
+.notifiche_blu .campanella {
+background-color: white;
+border-radius: 50%;
+height: 50px;
+width: 50px;
+padding: 14.5px 12.5px;
+text-align: center;
+margin-right: 5px;
+}
+
+#search_div {
+    position: relative;
+    height: 8%;
+    display: flex;
+    align-items: center;
+
+}
+#search {
+    width: 98%;
+    margin: 5px auto;
+    display: block;
+    height: 60%;
+    padding-left: 70px;
+    border-radius: 5px;
+    
+}
+
+.lens {
+    position: absolute;
+    bottom: 50%;
+    left: 7%;
+    transform: translateY(50%);
+}
+
+.messaggi_utenti {
+    padding: 0 10px;
+    background-color: white;
+    height: 70%;
+    overflow-y: scroll;
+}
+
+.messaggi_utenti li {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    height: 65px;
+}
+.messaggi_utenti li:not(:first-child) {
+    border-top: 1px solid #eaeaea;
+
+}
+.messaggi_utenti img {
+    height: 45px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.main_window {
+    height: 100%;
+    width: 60%;
+    float: left;
+    position: relative;
+}
+
+.main_window .header_window {
+    border-left: 1px solid #b1b1b1;
+}
+
+.main_footer {
+    height: 10%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: #f3eee9;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 30px;
+}
+
+.main_footer input {
+    width: 80%;
+    height: 60%;
+    padding-left: 10px;
+    border-radius: 5px;
+}
+
+.main_footer i {
+    font-size: 20px;
+    color: grey;
+}
