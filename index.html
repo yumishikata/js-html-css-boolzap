@@ -42,7 +42,7 @@
                 </div>
                 <div class="messaggi_utenti">
                     <ul>
-                        <li v-for="(contact,index) in contacts" @click="messaggio(index)">
+                        <li v-for="(contact,index) in contacts" @click="messaggio(index)" :class="{active: contact.visible}" >
                             <img :src="path + contact.avatar + ext" alt="">
                             <p>{{contact.name}}</p>
                         </li>

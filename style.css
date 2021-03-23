@@ -109,7 +109,7 @@ margin-right: 5px;
 }
 
 .messaggi_utenti {
-    padding: 0 10px;
+    
     background-color: white;
     height: 70%;
     overflow-y: scroll;
@@ -119,6 +119,7 @@ margin-right: 5px;
     display: flex;
     align-items: center;
     height: 65px;
+    padding: 0 10px;
 }
 .messaggi_utenti li:not(:first-child) {
     border-top: 1px solid #eaeaea;
@@ -201,4 +202,8 @@ margin-right: 5px;
 .received {
     background-color: white;
     
+}
+
+.active {
+    background-color: #eaeaea;
 }
