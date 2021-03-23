@@ -12,6 +12,9 @@ body {
     overflow: hidden;
 }
 
+li {
+    list-style: none;
+}
 /* FINESTRA CENTRALE */
 .window {
     height: 95vh;
@@ -113,7 +116,6 @@ margin-right: 5px;
 }
 
 .messaggi_utenti li {
-    list-style: none;
     display: flex;
     align-items: center;
     height: 65px;
@@ -162,4 +164,41 @@ margin-right: 5px;
 .main_footer i {
     font-size: 20px;
     color: grey;
+}
+
+.main_messaggi {
+    height: 90%;
+    width: 100%;
+    padding: 50px 70px 10vh 70px;
+
+}
+
+.main_messaggi li {
+    width: 300px;
+    padding: 17px 10px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    position: relative;
+}
+
+.main_messaggi li p:not(.ora) {
+    width: 100%;
+}
+.main_messaggi li .ora {
+    font-size: 10px;
+    color: grey;
+    position: absolute;
+    right: 5px;
+    bottom: 5px;
+}
+.sent {
+    background-color: #d5f9ba;
+    left: 100%;
+    transform: translateX(-100%)
+
+}
+
+.received {
+    background-color: white;
+    
 }
