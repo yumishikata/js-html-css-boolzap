@@ -64,7 +64,7 @@
                     <i class="fas fa-ellipsis-v"></i>
                 </div>
             </div>
-            <div class="main_messaggi">
+            <div class="main_messaggi" id="scroll">
                 <ul>
                     <li v-for="messaggi in contacts[indice].messages" :class="(messaggi.status=='sent') ? 'sent' : 'received'">
                         <p>{{messaggi.text}}</p>
@@ -75,7 +75,7 @@
             </div>
             <div class="main_footer">
                 <i class="far fa-smile"></i>
-                <input type="text" placeholder="Scrivi un messaggio">
+                <input type="text" placeholder="Scrivi un messaggio" v-model="mioMess" @keypress.enter="mioMessaggio(indice)">
                 <i class="fas fa-microphone"></i>
             </div>
         </div>

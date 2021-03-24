@@ -93,7 +93,8 @@ var app = new Vue({
             name: "Yumi",
             avatar: '_io'
         },
-        indice: 0
+        indice: 0,
+        mioMess: ''
         
     },
 
@@ -106,11 +107,30 @@ var app = new Vue({
             contatto.visible = true;
             this.indice=index;
         },
-
+        mioMessaggio: function(indice) {
+            var newMessage = {};
+            var contatto = this.contacts[indice];
+            var currentdate = new Date();
+            newMessage.date = currentdate.getDate() + "/" + (currentdate.getMonth()+1) 
+            + "/" + currentdate.getFullYear() + " " 
+            + currentdate.getHours() + ":" 
+            + currentdate.getMinutes() + ":" + currentdate.getSeconds();
+            newMessage.text = this.mioMess;
+            newMessage.status= 'sent';
+            contatto.messages.push(newMessage);
+            this.mioMess = '';
+            setTimeout(function(){
+                var newReply = {};
+                newReply.date = currentdate.getDate() + "/" + (currentdate.getMonth()+1) 
+                + "/" + currentdate.getFullYear() + " " 
+                + currentdate.getHours() + ":" 
+                + currentdate.getMinutes() + ":" + currentdate.getSeconds();
+                newReply.text = 'Ok';
+                newReply.status= 'received';
+                contatto.messages.push(newReply);
+            }, 1000)
+            
+        }
     }
-
 });
-
-
-
 
