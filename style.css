@@ -6,10 +6,13 @@
 
 body {
     font-family: 'Lato', sans-serif;
+    font-size: 13px;
     height: 100vh;
     width: 100%;
     background: linear-gradient(0deg, rgba(218,219,212,1) 85vh, rgb(0,150,136,1) 15vh);
     overflow: hidden;
+   
+
 }
 
 li {
@@ -18,9 +21,12 @@ li {
 /* FINESTRA CENTRALE */
 .window {
     height: 95vh;
+    min-width: 1000px;
     width: 80%;
     margin: 2.5vh auto;
     background-image: url(img/mine.jpg);
+    display: flex;
+
 
 }
 
@@ -29,7 +35,6 @@ li {
     height: 100%;
     width: 40%;
     background-color: #fafafa;
-    float: left;
 }
 
 /* DUE HEADER */
@@ -42,6 +47,12 @@ li {
     padding: 0 10px;
 }
 
+.nome {
+    font-size: 15px;
+}
+.ora {
+    color: grey;
+}
 .utente img {
     height: 40px;
     border-radius: 50%;
@@ -69,19 +80,16 @@ li {
     padding: 0 10px;
 }
 
-.notifiche_blu .campanella i {
-    font-size: 20px;
-    color: #8edafb;
-}
-
 .notifiche_blu .campanella {
 background-color: white;
 border-radius: 50%;
 height: 50px;
 width: 50px;
-padding: 14.5px 12.5px;
+line-height: 50px;
 text-align: center;
 margin-right: 5px;
+font-size: 20px;
+color: #8edafb;
 }
 
 #search_div {
@@ -134,7 +142,7 @@ margin-right: 5px;
 .main_window {
     height: 100%;
     width: 60%;
-    float: left;
+
     position: relative;
 }
 
@@ -207,3 +215,4 @@ margin-right: 5px;
 .active {
     background-color: #eaeaea;
 }
+

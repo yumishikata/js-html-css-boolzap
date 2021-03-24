@@ -92,7 +92,8 @@ var app = new Vue({
         utente: {
             name: "Yumi",
             avatar: '_io'
-        }
+        },
+        indice: 0
     },
 
     methods: {
@@ -102,7 +103,9 @@ var app = new Vue({
             });
             var contatto = this.contacts[index];
             contatto.visible = true;
-        }
+            this.indice=index;
+        },
+
     }
 
 });
