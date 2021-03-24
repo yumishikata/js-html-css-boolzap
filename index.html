@@ -69,7 +69,7 @@
                     <li v-for="messaggi in contacts[indice].messages" :class="(messaggi.status=='sent') ? 'sent' : 'received'">
                         <p>{{messaggi.text}}</p>
                         <p class="ora">{{messaggi.date}}</p>
-
+                        <i class="fas fa-chevron-down freccina"></i>
                     </li>
                 </ul>
             </div>

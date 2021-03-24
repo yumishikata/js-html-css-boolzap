@@ -192,6 +192,14 @@ color: #8edafb;
     margin-bottom: 10px;
     position: relative;
 }
+.freccina {
+    display: none;
+    position: absolute;
+    bottom: 50%;
+    right: 5px;
+    transform: translateY(50%);
+    color: grey;
+}
 .main_messaggi li:hover .freccina {
     display: block;
 }
@@ -200,7 +208,7 @@ color: #8edafb;
     width: 100%;
 }
 .main_messaggi li .ora {
-    font-size: 10px;
+    font-size: 8px;
     color: grey;
     position: absolute;
     right: 5px;
