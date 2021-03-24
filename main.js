@@ -94,6 +94,7 @@ var app = new Vue({
             avatar: '_io'
         },
         indice: 0
+        
     },
 
     methods: {

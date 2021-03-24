@@ -129,6 +129,9 @@ color: #8edafb;
     height: 65px;
     padding: 0 10px;
 }
+.messaggi_utenti li:hover:not(.active) {
+    background-color: #eaeaea;
+}
 .messaggi_utenti li:not(:first-child) {
     border-top: 1px solid #eaeaea;
 
@@ -189,6 +192,9 @@ color: #8edafb;
     margin-bottom: 10px;
     position: relative;
 }
+.main_messaggi li:hover .freccina {
+    display: block;
+}
 
 .main_messaggi li p:not(.ora) {
     width: 100%;
@@ -213,6 +219,9 @@ color: #8edafb;
 }
 
 .active {
-    background-color: #eaeaea;
+    background-color: lightgrey;
 }
 
+input {
+    border: 1px solid #eaeaea ;
+}
