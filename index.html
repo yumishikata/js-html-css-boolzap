@@ -55,7 +55,7 @@
                     <img :src="path + element.avatar + ext" alt="">
                     <div>
                         <p class="nome">{{ element.name }}</p>
-                        <p class="ora">{{attività}}</p>
+                        <p class="ora">{{ element.attivita }}</p>
                     </div>
                 </div>
                 <div class="icone">
@@ -66,7 +66,7 @@
             </div>
             <div class="main_messaggi" id="scroll">
                 <ul>
-                    <li v-for="messaggi in contacts[indice].messages" :class="(messaggi.status=='sent') ? 'sent' : 'received'">
+                    <li v-for="(messaggi,index) in contacts[indice].messages" :class="(messaggi.status=='sent') ? 'sent' : 'received'">
                         <p>{{messaggi.text}}</p>
                         <p class="ora">{{messaggi.date}}</p>
                         <i class="fas fa-chevron-down freccina"></i>
@@ -79,7 +79,6 @@
                 <i class="fas fa-microphone"></i>
             </div>
         </div>
-    
     </div>
     <script src="main.js"></script>
 </body>
