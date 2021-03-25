@@ -1,6 +1,7 @@
 var path = 'img/avatar';
 var ext = '.jpg';
 var app = new Vue({
+    
     el: '#root',
     data: {
 
@@ -30,7 +31,7 @@ var app = new Vue({
             {
                 name: 'Fabio',
                 avatar: '_2',
-                visible: false,
+                visible: true,
                 messages: [
                     {
                         date: '20/03/2020 16:30:00',
@@ -52,7 +53,7 @@ var app = new Vue({
             {
                 name: 'Samuele',
                 avatar: '_3',
-                visible: false,
+                visible: true,
                 messages: [
                     {
                         date: '28/03/2020 10:10:40',
@@ -74,7 +75,7 @@ var app = new Vue({
             {
                 name: 'Luisa',
                 avatar: '_4',
-                visible: false,
+                visible: true,
                 messages: [
                     {
                         date: '10/01/2020 15:30:55',
@@ -94,17 +95,14 @@ var app = new Vue({
             avatar: '_io'
         },
         indice: 0,
-        mioMess: ''
+        mioMess: '',
+        search: '',
+        attività: 'Ultimo accesso oggi alle '
         
     },
 
     methods: {
         messaggio: function(index){
-            this.contacts.forEach(element => {
-                element.visible = false;
-            });
-            var contatto = this.contacts[index];
-            contatto.visible = true;
             this.indice=index;
         },
         mioMessaggio: function(indice) {
@@ -119,7 +117,10 @@ var app = new Vue({
             newMessage.status= 'sent';
             contatto.messages.push(newMessage);
             this.mioMess = '';
+            this.attività = 'Sta scrivendo...'
             setTimeout(function(){
+                app.attività = "Ultimo accesso oggi alle " + currentdate.getHours() + ":" 
+                + currentdate.getMinutes() + ":" + currentdate.getSeconds();;
                 var newReply = {};
                 newReply.date = currentdate.getDate() + "/" + (currentdate.getMonth()+1) 
                 + "/" + currentdate.getFullYear() + " " 
@@ -128,8 +129,20 @@ var app = new Vue({
                 newReply.text = 'Ok';
                 newReply.status= 'received';
                 contatto.messages.push(newReply);
-            }, 1000)
+            }, 1000);
+
             
+        },
+
+        ricerca: function() {
+            this.search.toUpperCase();
+            this.contacts.forEach(element => {
+                var { name, visible } = element;
+                element.visible = false;
+                if(name.includes(this.search)){
+                    element.visible = true; 
+                }
+            });
         }
     }
 });
