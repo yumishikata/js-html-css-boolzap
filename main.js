@@ -140,7 +140,7 @@ var app = new Vue({
             this.contacts.forEach(element => {
                 var { name, visible } = element;
                 for(var i = 0; i<this.search.length ; i++){
-                    if(name.startsWith(this.search) ){
+                    if(name.startsWith(this.search.charAt(0).toUpperCase()) ){
                         element.visible = true;
                     } else {
                         element.visible = false;

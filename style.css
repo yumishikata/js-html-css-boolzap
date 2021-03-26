@@ -259,3 +259,8 @@ input {
 .freccina:hover .div-info {
     visibility: visible;
 }
+
+.details {
+    color: black;
+    font-size: 10px;
+}
